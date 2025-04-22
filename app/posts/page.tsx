@@ -1,24 +1,14 @@
-import React from 'react'
-import { Suspense } from 'react';
-import PostsLists from './components/PostsLists';
-type Post = {
-    id: string;
-    title: string;
+import React, { Suspense } from "react";
+
+import ClientPostsList from "./components/ClientPostsList";
+
+const PostsPage = () => {
+  return (
+    <div>
+      <h1>Posts</h1>
+      <ClientPostsList />
+    </div>
+  );
 };
 
-
-
-const Postspage =  () => {
-    return(
-        <div className="container mx-auto">
-           <h1>Posts</h1>
-           <Suspense fallback={<div className="container mx-auto text-red-500">Loading...</div>}>
-            <PostsLists/>
-            </Suspense>
-        </div>
-    )
-
-  };
-  
-
-export default Postspage
+export default PostsPage;
