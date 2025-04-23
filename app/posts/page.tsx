@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-
+import PostsLists from "./components/PostsLists";
 import ClientPostsList from "./components/ClientPostsList";
 
 const PostsPage = () => {
